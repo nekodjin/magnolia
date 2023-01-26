@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "frontend",
+    "backend-common",
+    "backend-native",
+    "backend-web",
+]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2021"
+license = ""
+authors = [ "Avery R. <contact@nekodjin.org>" ]
+repository = "https://github.com/nekodjin/magnolia.git"

@@ -1,0 +1,22 @@
+[package]
+name = "backend-native"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[build-dependencies]
+tauri-build = "1.2.1"
+
+[dependencies]
+tauri = "1.2.2"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[features]
+# tauri runs local/debug builds with --no-default-features
+default = [ "prod" ]
+# used in production builds, when the frontend
+# needs to be served by the app
+prod = [ "tauri/custom-protocol" ]
